@@ -15,7 +15,7 @@ class Driver(object):
         config.read(filenames=os.getcwd() + "/../lib/conf.ini")
         config.options("baseconf")
         self.ip_address=config.get("baseconf","ip")
-        #print 'ip:',ip_address
+        print("ip",self.ip_address)
 
         self.port=config.get("baseconf","port")
         #print 'port:',port
@@ -33,8 +33,8 @@ class Driver(object):
         self.driver.quit()
 
     def open(self):
-        self.driver = webdriver.Firefox()
-        # driver = webdriver.Chrome()
+        #self.driver = webdriver.Firefox()
+        self.driver = webdriver.Chrome()
         self.url = "http://" + self.ip_address + ":" + self.port
         self.driver.get(self.url)
 

@@ -27,7 +27,7 @@ class Driver(object):
         #print 'password:',password
 
         self.share_name=config.get("share", "share_name")
-        print (self.share_name)
+        # print (self.share_name)
 
         self.share_volume=config.get("share", "share_volume")
 
@@ -35,7 +35,23 @@ class Driver(object):
 
         self.share_size=config.get("share", "share_size")
 
+        self.quota_unit=config.get("share", "quota_unit")
+
         self.share_type=config.get("share","share_type")
+
+        self.share_edit_size = config.get("share_edit", "share_size")
+
+        self.quota_edit_unit = config.get("share_edit", "quota_unit")
+
+        self.share_edit_type = config.get("share_edit", "share_type")
+
+        self.iscsi_name = config.get("iscsi_user", "iscsi_name")
+
+        self.iscsi_password = config.get("iscsi_user", "iscsi_password")
+
+        self.iscsi_confirm_pwd = config.get("iscsi_user", "iscsi_confirm_pwd")
+
+        self.iscsi_volume = config.get("iscsi", "iscsi_volume")
 
         # driver.find_element_by_class_name("fa-sign-out").click()
 
